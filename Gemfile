@@ -24,7 +24,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Add devise for authentication
 gem 'devise'
 
+# Add bower-rails for front-end management
 gem 'bower-rails'
+
+# Add faker for seed data
+gem 'faker'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
