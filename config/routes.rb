@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :customers, only: [:index]
 
   root 'dashboard#index'
+
+  get 'angular_test', to: 'angular_test#index'
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
