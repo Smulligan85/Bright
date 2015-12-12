@@ -51,4 +51,22 @@ feature "Customer Search" do
       expect(page.all("ol li.list-group-item")[3]).to have_content("Jones")
     end
   end
+
+  scenario "Search Email" do
+    within "section.search-form" do
+      fill_in "keywords", with: "bob123@somewhereelse.net"
+    end
+
+    within "section.search-results" do
+      expect(page).to have_content("Results")
+      expect(page.all("ol li.list-group-item").count).to eq(4)
+      expect(page.all("ol li.list-group-item")[0]).to have_content("Bob")
+      expect(page.all("ol li.list-group-item")[0]).to have_content("Jones")
+      expect(page.all("ol li.list-group-item")[1]).to have_content("JR")
+      expect(page.all("ol li.list-group-item")[1]).to have_content("Bob")
+      expect(page.all("ol li.list-group-item")[3]).to have_content("Bob")
+      expect(page.all("ol li.list-group-item")[3]).to have_content("Johnson")
+    end
+
+  end
 end
