@@ -30,6 +30,9 @@ gem 'bower-rails'
 # Add faker for seed data
 gem 'faker'
 
+gem 'angular-rails-templates'
+gem 'sprockets', '~> 2.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
