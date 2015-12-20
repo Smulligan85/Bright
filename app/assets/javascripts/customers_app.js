@@ -1,10 +1,4 @@
-var app = angular.module(
-  'customers',
-  [
-    'ngRoute',
-    'templates'
-  ]
-); 
+var app = angular.module('customers',['ngRoute', 'templates']);
 
 app.config([
           "$routeProvider",
@@ -12,7 +6,7 @@ app.config([
     $routeProvider.when("/", {
        controller: "CustomerSearchController",
       templateUrl: "customer_search.html"
-    }).when("/:id",{
+    }).when("/:id", {
        controller: "CustomerDetailController",
       templateUrl: "customer_detail.html"
     });
