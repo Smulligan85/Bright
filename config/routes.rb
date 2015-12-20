@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :customers, only: [:index]
+  resources :customers, only: [:index, :show]
 
   root 'dashboard#index'
-
-  get 'angular_test', to: 'angular_test#index'
+  
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
