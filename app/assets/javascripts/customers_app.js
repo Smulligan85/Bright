@@ -23,9 +23,6 @@ app.controller("CustomerSearchController", [
           '$scope','$http','$location',
   function($scope , $http , $location) {                         
 
-   // rest of controller....
-
-
     var page = 0;
 
     $scope.customers = [];
@@ -66,8 +63,6 @@ app.controller("CustomerSearchController", [
 app.controller("CustomerDetailController", [ 
           "$scope","$http","$routeParams",
   function($scope , $http , $routeParams) {
-
-    // Make the AJAX call and set $scope.customer...
 
     var customerId = $routeParams.id;
     $scope.customer = {};
